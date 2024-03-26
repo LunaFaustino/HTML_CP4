@@ -5,13 +5,12 @@ const Inicio = () => {
     return(
         <>
         <main className="inicio">
-            <section className="batata">
+            <section className="secao-inicio">
                 <h1>Que tal uma música que combine com seu humor?</h1>
-                <button className="vamos-comecar">
-                    <Link href="/Perguntas1" className="link-vamos-comecar">Vamos começar?</Link>
+                <button className="botao-vamos-comecar">
+                    <Link href="/Pergunta1" className="link-vamos-comecar">Vamos começar?</Link>
                 </button>             
             </section>
-            <Image src="/assets/inicio.jpg" alt="Imagem inicio" width="1000" height="512" className="imagem-inicio"></Image>
         </main>   
         </>
     )

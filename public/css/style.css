@@ -1,38 +1,56 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+  }
+
 /*ESTILIZAÇÃO PAGINA INICIAL*/
 
-.batata{
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 900px;
+    background-image: url('../assets/imagem-inicial.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-size: cover; 
+}
+.secao-inicio{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 60px;
+    width: 40%;
     height: auto;
-    background-image: linear-gradient(#00D0DE, #057794, #000000);    
-    background-size: 100% auto;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 10pc;
 }
-.batata h1{
-    padding: 100px;
+.secao-inicio h1{
+    color: #590C1D;
+    padding: 10%;
     font-size: 60px;
     line-height: 67px;
     font-weight: bold;
     text-align: center;
 }
-.vamos-comecar{
+.botao-vamos-comecar{
     display: flex;
     align-items: center;
     justify-content: center;
     width: auto;
     height: auto;
-    padding: 10px 20px;
+    margin-bottom: 10%;
     box-shadow: none;
     border-width: 3px;
-    border-color: white;
+    border-color: #7A4018;
     border-radius: 15px;
     background-color: transparent;
 }
 .link-vamos-comecar{
     display: flex;
-    color: white;
+    color: #7A4018;
     padding: 15px 34px;
     align-items: center;
     font-size: 32px;
@@ -40,7 +58,8 @@
     font-weight: bold;
     text-decoration: none;
 }
-.imagem-inicio{
-    width: 100%;
-    height: auto;
+.link-vamos-comecar:hover{
+    color: white;
+    background-color: #1E4773;
+    border: none;
 }
