@@ -12,16 +12,30 @@ const Pergunta1 = () => {
 
     return(
         <>
-            <h1>Como está se sentindo hoje?</h1>
-            <div>
-                <form>
-                    <input type="radio" name="sentimento" value="está bem" onChange={handleSentimentoChange}/> Estou bem :D
-                    <input type="radio" name="sentimento" value="está mais ou menos" onChange={handleSentimentoChange}/> Hmm estou mais ou menos :/
-                    <input type="radio" name="sentimento" value="está meio pra baixo" onChange={handleSentimentoChange}/> Estou meio pra baixo :c
-                </form>
-                {sentimento && <p>Você selecionou que {sentimento}</p>}
-                <Link href="/Pergunta2"><button>Próxima pergunta</button></Link>
-            </div>
+            <main className="pergunta">
+                <section className="sessao">
+                    <h1>Como está se sentindo hoje?</h1>
+                    <div className="geral">
+                        <form>
+                            <div className="opcoes">
+                                <label>
+                                    <input type="radio" name="sentimento" value="está bem" onChange={handleSentimentoChange}/> Estou bem 😊
+                                </label>
+                                <label>
+                                    <input type="radio" name="sentimento" value="está mais ou menos" onChange={handleSentimentoChange}/> Hmm estou mais ou menos 🤔
+                                </label>
+                                <label>
+                                    <input type="radio" name="sentimento" value="está meio pra baixo" onChange={handleSentimentoChange}/> Estou meio pra baixo 😢
+                                </label>
+                            </div>
+                        </form>
+                        <div className="selecionado">
+                            {sentimento && <p>Você selecionou que {sentimento}</p>}
+                        </div>
+                        <button className="botao"><Link href="/Pergunta2" className="linkbotao">Próxima pergunta</Link></button>
+                    </div>
+                </section>
+            </main>
         </>
     )
 }

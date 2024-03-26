@@ -12,16 +12,30 @@ const Pergunta2 = () => {
 
     return(
         <>
-            <h1>Escolha uma cor!</h1>
-            <div>
-                <form>
-                    <input type="radio" name="cor" value="amarelo" onChange={handleCorChange}/> Amarelo, me lembra o sol!
-                    <input type="radio" name="cor" value="verde" onChange={handleCorChange}/> Acho que verde, tranquilo
-                    <input type="radio" name="cor" value="azul" onChange={handleCorChange}/> Azul como o mar
-                </form>
-                {cor && <p>Você selecionou a cor {cor}</p>}
-                <Link href="/Pergunta3"><button>Próxima pergunta</button></Link>
-            </div>
+            <main className="pergunta">
+                <section className="sessao">
+                    <h1>Escolha uma cor!</h1>
+                    <div className="geral">
+                        <form>
+                            <div className="opcoes">
+                                <label>
+                                    <input type="radio" name="cor" value="amarelo" onChange={handleCorChange}/> Amarelo, me lembra o sol 🌞
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="verde" onChange={handleCorChange}/> Acho que verde, tranquilo 🍃
+                                </label>
+                                <label>
+                                    <input type="radio" name="cor" value="azul" onChange={handleCorChange}/> Azul como o mar 🌊
+                                </label>
+                            </div>
+                        </form>
+                        <div className="selecionado">
+                            {cor && <p>Você selecionou a cor {cor}</p>}
+                        </div>
+                        <button className="botao"><Link href="/Pergunta3" className="linkbotao">Próxima pergunta</Link></button>
+                    </div>
+                </section>
+            </main>
         </>
     )
 }
