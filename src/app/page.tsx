@@ -1,7 +1,14 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const Inicio = () => {
+
+    useEffect(() => {
+        alert("Seja bem-vindo");
+    }, []);
+
     return(
         <>
         <main className="inicio">
