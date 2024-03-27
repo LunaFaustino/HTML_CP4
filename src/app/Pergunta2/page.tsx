@@ -2,14 +2,23 @@
 import Link from "next/link";
 import { SetStateAction, useState } from "react";
 
-const Pergunta2 = () => {
+interface Pergunta2Props {
+    saveRespostaHandler: (pergunta: string, resposta: string) => void;
+}
+   
+const Pergunta2: React.FC<Pergunta2Props> = ({ saveRespostaHandler }) => {
 
     const [cor, setCor] = useState("");
 
-    const handleCorChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+    const handleCorChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const resposta = event.target.value;
         setCor(event.target.value);
+        //isso vai atualizar o estadosRespostas com a resposta selecionada
+        
     }
-
+    const saveResposta = () => {
+        saveRespostaHandler("Pergunta2", cor);
+    }
     return(
         <>
             <main className="pergunta">
@@ -32,7 +41,7 @@ const Pergunta2 = () => {
                         <div className="selecionado">
                             {cor && <p>Você selecionou a cor {cor}</p>}
                         </div>
-                        <button className="botao"><Link href="/Pergunta3" className="linkbotao">Próxima pergunta</Link></button>
+                        <button className="botao" onClick={saveResposta}>Próxima pergunta</button>
                     </div>
                 </section>
             </main>

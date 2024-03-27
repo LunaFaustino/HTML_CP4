@@ -2,14 +2,22 @@
 import Link from "next/link";
 import { SetStateAction, useState } from "react";
 
-const Pergunta1 = () => {
+interface Pergunta1Props {
+    saveRespostaHandler: (pergunta: string, resposta: string) => void;
+}
+   
+const Pergunta1: React.FC<Pergunta1Props> = ({ saveRespostaHandler }) => {
 
     const [sentimento, setSentimento] = useState("");
-
-    const handleSentimentoChange = (event: { target: { value: SetStateAction<string>; }; }) => {
-        setSentimento(event.target.value);
+    // troca do SetStateAction para usar direto o tipo string
+    const handleSentimentoChange = (event: React.ChangeEvent<HTMLInputElement>) => {        
+        const resposta = event.target.value;                
+        setSentimento(resposta);        
+        //isso vai atualizar o estadosRespostas com a resposta selecionada        
     }
-
+    const saveResposta = () => {
+        saveRespostaHandler("Pergunta1", sentimento);
+    }
     return(
         <>
             <main className="pergunta">
@@ -32,7 +40,7 @@ const Pergunta1 = () => {
                         <div className="selecionado">
                             {sentimento && <p>Você selecionou que {sentimento}</p>}
                         </div>
-                        <button className="botao"><Link href="/Pergunta2" className="linkbotao">Próxima pergunta</Link></button>
+                        <button className="botao" onClick={saveResposta}>Próxima pergunta</button>
                     </div>
                 </section>
             </main>

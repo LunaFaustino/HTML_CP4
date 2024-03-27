@@ -8,7 +8,7 @@ const Inicio = () => {
             <section className="secao-inicio">
                 <h1>Que tal uma música que combine com seu humor?</h1>
                 <button className="botao-vamos-comecar">
-                    <Link href="/Pergunta1" className="link-vamos-comecar">Vamos começar?</Link>
+                    <Link href="/App" className="link-vamos-comecar">Vamos começar?</Link>
                 </button>             
             </section>
         </main>   

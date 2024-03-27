@@ -2,14 +2,22 @@
 import Link from "next/link";
 import { SetStateAction, useState } from "react";
 
-const Pergunta3 = () => {
+interface Pergunta3Props {
+    saveRespostaHandler: (pergunta: string, resposta: string) => void;
+}
+   
+const Pergunta3: React.FC<Pergunta3Props> = ({ saveRespostaHandler }) => {
 
     const [lugar, setLugar] = useState("");
 
-    const handleLugarChange = (event: { target: { value: SetStateAction<string>; }; }) => {
+    const handleLugarChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const resposta = event.target.value;
         setLugar(event.target.value);
+        //isso vai atualizar o estadosRespostas com a resposta selecionada        
     }
-
+    const saveResposta = () => {
+        saveRespostaHandler("Pergunta3", lugar);
+    }
     return(
         <>
             <main className="pergunta">
@@ -35,7 +43,7 @@ const Pergunta3 = () => {
                         <div className="selecionado">
                             {lugar && <p>Você selecionou {lugar}</p>}
                         </div>
-                        <button className="botao"><Link href="/Resultado" className="linkbotao">Próxima pergunta</Link></button>
+                        <button className="botao" onClick={saveResposta}>Finalizar</button>
                     </div>
                 </section>
             </main>
