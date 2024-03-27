@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 900px;
+    height: 100vh;
     background-image: url('../assets/imagem-inicial.jpeg');
     background-repeat: no-repeat;
     background-position: center;  
@@ -151,4 +151,9 @@
     color: white;
     background-color: #1E4773;
     border: none;
+}
+
+footer{
+    background-color: black;
+    color: white;
 }
