@@ -41,7 +41,7 @@
     justify-content: center;
     width: auto;
     height: auto;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
     box-shadow: none;
     border-width: 3px;
     border-color: #7A4018;
@@ -78,6 +78,8 @@
 }
 
 .geral{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     align-content: center;
 }
@@ -149,16 +151,20 @@
     border-color: #1E4773;
 }
 
-.sessao.musicaSugerida{    
-    height: 80%;
-    width: 80%;    
+/* Resultados */
+
+.sessao.musicaSugerida{
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+    padding: 0 5%;    
 }
 
 .sessao.musicaSugerida h1{           
-    padding: 0;      
+    padding-top: 30px;
     text-align: center;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .geral.musicaSugerida {   
@@ -166,25 +172,25 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   gap: 30px;
    width: auto;
-   height: 100%;
-   height: auto;
-   
+   height: auto;   
 }
+
 .musica-imagem{
-    width: 50%;
+    width: 40%;    
 }
 .musica-titulo{
-    font-size: 48px;
-    margin-top: 10px;
+    font-size: 48px;    
 }
 
 .musica-link{
     font-size: 32px;
 }
 
-footer{
-    background-color: black;
-    color: white;
 
+/*footer*/
+footer{
+    background-color: #1E4773;
+    color: white;
 }

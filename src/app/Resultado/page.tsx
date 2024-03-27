@@ -92,27 +92,18 @@ const Resultado : React.FC<ResultadoProps> = ({ respostas }) => {
                 <section className="sessao musicaSugerida">
                     <h1>Sua sugestão de música</h1>
                     <div className="geral musicaSugerida">
-                        <img className="musica-imagem" src={'/assets/Trouble.jpg'} alt={musicaSugerida.titulo} />           
+                        <img className="musica-imagem" src={musicaSugerida.imagem} alt={musicaSugerida.titulo} />           
                         <h3 className="musica-titulo">{musicaSugerida.titulo} por {musicaSugerida.artista}</h3>
                         <Link className="musica-link" href={musicaSugerida.link}>Ouça aqui</Link>
                     </div>
+                    <button className="botao-vamos-comecar">
+                            <Link href="/" className="link-vamos-comecar">Pedir outra música</Link>
+                    </button>
                 </section>
             </main>
         </>
         
-     ); 
-    /*
-    return(
-        <div>
-          <h2>Sua sugestão de música:</h2>
-          <div>
-            <img src={musicaSugerida.imagem} alt={musicaSugerida.titulo} />
-            <h3>{musicaSugerida.titulo} por {musicaSugerida.artista}</h3>
-            <Link href={musicasSugeridas.link}>Ouça aqui</Link>
-          </div>
-        </div>
-     ); 
-     */   
+     );   
 };
   
 export default Resultado;
