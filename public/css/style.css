@@ -29,7 +29,7 @@
 }
 .secao-inicio h1{
     color: #590C1D;
-    padding: 10%;
+    padding: 5%;
     font-size: 60px;
     line-height: 67px;
     font-weight: bold;
@@ -155,7 +155,7 @@
 
 .sessao.musicaSugerida{
     height: auto;
-    width: auto;
+    width: auto;    
     justify-content: space-between;
     padding: 0 5%;    
 }
@@ -178,7 +178,9 @@
 }
 
 .musica-imagem{
-    width: 40%;    
+    width: auto;   
+    height: auto;
+    max-width: 500px;
 }
 .musica-titulo{
     font-size: 48px;    
